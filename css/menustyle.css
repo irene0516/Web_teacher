@@ -1,0 +1,51 @@
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 30px;
+    height: 30px;
+    margin: 150px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn span {
+    width: 100%;
+    left: 0;
+    background: #fff;
+    height:3px;
+    position: absolute;
+    transition: all 500ms;
+}
+
+.btn .line1 {
+    top: 0;
+    transform: rotate(0);
+    background-color: #000000;
+    transform-origin: left top;
+}
+
+.btn .line2 {
+    background-color: #000000;
+    top: 14px;
+}
+
+.btn .line3 {
+    background-color: #000000;
+    bottom: 0;
+    transform: rotate(0);
+    transform-origin: left bottom;
+}
+
+.btn.on .line1 {
+    width: 145px;
+    transform: rotate(41deg);
+}
+
+.btn.on .line2 {
+    left: -100%;
+}
+
+.btn.on .line3 {
+    width: 145px;
+    transform: rotate(-41deg);
+}

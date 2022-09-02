@@ -1,0 +1,1031 @@
+@charset "utf-8";
+/*@import url('https://fonts.googleapis.com/css?family=Concert+One');*/
+/*font-family: 'Concert One', cursive;*/
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+/*font-family: 'Fredoka One', cursive;*/
+/*楷體*/
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css');
+/*font-family: 'cwTeXKai', serif;*/
+/*圓體*/
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexyen.css');
+/*font-family: 'cwTeXYen', sans-serif;*/
+
+/*仿宋體*/
+/*@import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css');*/
+/*font-family: 'cwTeXFangSong', serif;*/
+
+/*明體*/
+/*@import url('https://fonts.googleapis.com/earlyaccess/cwtexming.css');*/
+/*font-family: 'cwTeXMing', serif;*/
+
+/*-----------------------------
+
+	重設CSS預設樣式＋網站共通設定
+
+------------------------------*/
+
+/* 所有元素的初始間距設定 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, main,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+/* 預設文字樣式 */
+body {
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    /*background: url(../img/bg.jpg) repeat;*/
+    /*background: url(../img/bg_check.png) repeat;*/
+    /*background: green url(../img/images.jpg) top repeat ;*/
+    /*background-color: #7ffafe;*/
+    /*background-color: rgb(127, 173, 203);*/
+    background-image:  linear-gradient(to bottom, rgba(73, 122, 127, 0.53), rgba(73, 122, 127, 0.5)),url(../img/images.jpg);
+    background-repeat  : no-repeat,repeat;
+    background-position: bottom right,left;
+
+}
+
+/* 隱藏項目符號 */
+ul, ol {
+    list-style-type: none;
+}
+
+/* 設定表格框線 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 將圖片及表單元件上下置中 */
+img, input, select, textarea {
+    vertical-align: middle;
+}
+
+/* 設定連結顏色 */
+a {
+    color: #59220d;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #d53e04;
+}
+
+/* 設定圖片連結 */
+a img {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+a:hover img {
+    opacity: 0.7;
+}
+
+/*自動換行*/
+div {
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+/*強制英文單字斷行*/
+div {
+    word-break: break-all;
+}
+
+/*左右側空白消去*/
+.full {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.inner {
+    /*max-width: 1140px;*/
+    margin: 0 auto;
+}
+
+.inner:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*=======================================*/
+/*頁頭*/
+#header {
+    /*background-color: rgba(81, 255, 233, 0.46);*/
+    background-color: rgba(105, 176, 255, 0.29);
+    min-height: 200px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+#header h1 {
+
+    width: 65%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 140%;
+}
+
+#header h1 span:first-child {
+    color: rgba(255, 255, 255, 0.77);
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 1px 1px 0 #999, 1px -1px 0 #999, -1px -1px 0 #999, -1px 1px 0 #999;
+    position: relative;
+}
+
+#header h1 span:last-child {
+    position: absolute;
+    top: 160%;
+    left: 20%;
+    color: rgba(255, 255, 255, 0.77);
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 1px 1px 0 #999, 1px -1px 0 #999, -1px -1px 0 #999, -1px 1px 0 #999;
+}
+
+#img {
+    /*max-width: 1140px;*/
+    background: url(../img/book.jpg) center top no-repeat;
+    min-height: 200px;
+    height: auto;
+    background-size: cover;
+}
+
+#header #setbar {
+    position: absolute;
+    right: 7px;
+    top: 135px;
+    height: auto;
+    /*margin: 15px 5px;*/
+    /*font-size: 1.3em;*/
+}
+
+#header #setbar li {
+    /*display: inline;*/
+    margin: 0 2px;
+}
+
+#header .english {
+    display: none;
+}
+
+#header .english a {
+    color: rgba(255, 255, 255, 0.7);
+    /*border: rgba(255, 255, 255, 0.6) 3px solid;*/
+    /*border-radius: 0.3em;*/
+    font-size: 1.5em;
+    padding: 10px 10px;
+    margin: 0 2px;
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+}
+
+#header .english a:hover {
+    color: #fff;
+}
+
+#header .login {
+    color: rgba(197, 178, 160, 0.7);
+    padding: 7px 5px;
+    margin: 50px 10px 0;
+    text-decoration: none;
+    border: rgba(255, 255, 255, 0.7) 3px solid;
+    border-radius: 0.3em;
+    font-size: 1.5em;
+    font-family: 'Fredoka One', cursive;
+    background-color: #67675c;
+}
+
+#header .login:hover {
+    color: #fff;
+    border: rgb(255, 255, 255) 3px solid;
+    border-radius: 0.3em;
+}
+
+#header .loginlist {
+    display: inline;
+    /*margin: 0 3px;*/
+}
+
+.logoutbtn:before {
+    content: "";
+    border: transparent 10px solid;
+    border-bottom-color: rgb(211, 188, 202);
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    width: 0;
+}
+
+.logoutbtn {
+    display: none;
+    position: absolute;
+    background-color: rgba(249, 238, 156, 1);
+    /*box-shadow:0px 0px 6px 4px #282828;*/
+    box-shadow: 4px 4px 5px 0px #262626;
+    min-width: 50px;
+    max-width: 500px;
+    right: 10%;
+    top: 90px;
+    z-index: 1;
+}
+
+.logoutbtn a {
+    display: block;
+    background-color: rgb(211, 188, 202);
+    color: rgb(116, 99, 87);
+    padding: 5px 5px;
+    /*padding: 12px 16px;*/
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logoutbtn li {
+    border-bottom: rgb(143, 107, 103) 3px solid;
+}
+
+.logoutbtn li:last-child {
+    border-bottom: none;
+}
+
+.logoutbtn a:hover {
+    background-color: rgba(73, 38, 36, 0.8);
+    color: rgb(231, 184, 197);
+}
+
+/*=======================================*/
+
+/*=======================================*/
+/*主導行*/
+#nav {
+    overflow: hidden;
+    margin-bottom: -10px;
+}
+
+#nav2 {
+    display: none;
+}
+
+#back {
+    position: relative;
+
+}
+
+#nav ul {
+    width: 100%;
+}
+
+#nav .bar {
+    width: 100%;
+    background-color: rgba(114, 83, 57, 0.8);
+    padding: 2px 2px;
+}
+
+#nav .barlast {
+    width: 100%;
+    padding: 2px 2px;
+    background-color: rgba(114, 83, 57, 0.8);
+}
+
+#nav a, #nav2 a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'cwTeXKai', serif;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#nav li:hover, #nav2 li:hover {
+    /*border-bottom: none;*/
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#nav a:hover, #nav2 a:hover {
+    font-weight: bold;
+    color: rgb(40, 32, 29);
+}
+
+#nav #active, #nav2 #active {
+    width: 100%;
+    height: 50px;
+    padding: 2px 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: rgb(162, 137, 104) 2px solid;
+    /*border-bottom: none;*/
+}
+
+#nav #barlastactive, #nav2 #barlastactive {
+    min-width: 19%;
+    height: 48px;
+    padding: 3px 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: rgb(162, 137, 104) 2px solid;
+    /*border-bottom: none;*/
+
+}
+
+#nav #active a, #nav #barlastactive a, #nav2 #active a, #nav2 #barlastactive a {
+    color: rgb(8, 8, 8);
+    font-weight: bold;
+}
+
+#ulback li:last-child {
+    min-width: 19%;
+}
+
+#ulback #barback {
+    width: 100%;
+    height: 45px;
+    border: rgb(162, 137, 104) 2px solid;
+    background: url(../img/barimg.jpg) center bottom;
+    /*border-bottom: none;*/
+}
+
+#ulback {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    /*overflow: hidden;*/
+    /*background-color: black;*/
+}
+
+/*=======================================*/
+
+/*=======================================*/
+/*主要內容*/
+
+#content {
+    width: 100%;
+    height: auto;
+    /*background-color: rgb(127, 173, 203);*/
+}
+
+#main {
+    width: 100%;
+    /*margin-left:-20px;*/
+    height: auto;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+#intro {
+    /*background: url(../img/bg.jpg) center top;*/
+    background-image:  linear-gradient(to bottom, rgba(200, 200, 200, 0.66), rgba(200, 200, 200, 0.5)),url(../img/images.jpg);
+    background-repeat  : no-repeat,repeat;
+    background-position: bottom right,left;
+    /*background: url(../img/images.jpg) center top;*/
+    padding: 20px 10px;
+    color: rgba(26, 73, 92, 0.9);
+    /*background-color: rgba(188, 229, 220, 0.9);*/
+    font-family: 'cwTeXYen', sans-serif;
+}
+
+#intro .col-sm-8 h2 {
+    margin: 40px auto;
+    color: #2b2b2b;
+}
+
+#intro h2 {
+    font-size: 1.8em;
+    margin: 20px auto 30px;
+    font-weight: bold;
+}
+
+#intro p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+.heading {
+    /*margin:10px 30px 20px;*/
+    padding-bottom: 10px;
+    font-size: 1.7em;
+    font-weight: bold;
+    border-bottom: 2px rgba(0, 110, 0, 0.9) solid;
+    color: rgba(0, 110, 0, 0.9);
+}
+
+.headingbg {
+    margin: 30px 0;
+    padding: 10px 7px 0;
+    border: 1px #6eb6de dotted;
+    background: #f8ffd1;
+    border-radius: 10px;
+    color: #5d5d5d;
+}
+
+#contact dt {
+    font-size: 1.2em;
+    clear: left;
+    float: left;
+    width: 5em;
+    padding-bottom: 10px;
+}
+
+#contact dd {
+    font-size: 1em;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+#resumep {
+    font-family: 'cwTeXKai', serif;
+    padding: 10px;
+}
+
+#about {
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+#about thead tr {
+    background-image: url(../img/patternb-head.png);
+}
+
+#about thead th {
+    /*padding-left:10px;*/
+    text-align: center;
+}
+
+#about tbody td {
+    font-size: 1.2em;
+    background-image: url(../img/patternb.png);
+    padding: 20px;
+}
+
+#about table:first-child tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#about table:last-child tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.aboutfont {
+    float: right;
+    width: 95%;
+
+    /*margin-left:10px;*/
+}
+
+.aboutimg {
+    overflow: hidden;
+}
+
+.aboutimg img {
+    margin-left: 5px;
+    float: left;
+    width: 22px;
+    height: 22px;
+    /*background-color: #00bcd4;*/
+}
+
+#admtable tr:nth-child(even) {
+    background: rgb(223, 216, 232)
+}
+
+#admtable tbody tr:nth-child(2n+1) {
+    background: #FFF
+}
+
+#admtable thead tr {
+    background: linear-gradient(rgb(158, 129, 185), rgb(136, 126, 152));
+}
+
+#admtable thead, #admtable tr {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(211, 202, 221);
+
+}
+
+#admtable {
+    margin-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(211, 202, 221);
+}
+
+#admtable td {
+    padding: 5px 8px;
+    font-size: 15px;
+    font-family: Verdana;
+    color: rgb(95, 74, 121);
+}
+
+#admtable th {
+    padding: 3px 8px;
+    font-size: 17px;
+    font-family: Verdana;
+    color: rgb(246, 242, 255);
+    font-weight: bold;
+}
+
+#studentul ul {
+    overflow: hidden;
+}
+
+#studentul ul li {
+    display: inline;
+}
+
+#side {
+    width: 100%;
+}
+
+#date {
+    display: none;
+    margin-right: -10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgba(44, 116, 96, 0.61);
+    border: rgb(190, 160, 119) 3px solid;
+    margin-bottom: 80px;
+}
+
+#date p:first-child {
+    color: #fff;
+    font-family: 'Indie+Flower', cursive;
+    padding: 10px 10px;
+    font-size: 2em;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: rgba(215, 180, 120, 1);
+    border-bottom: rgb(190, 160, 119) 3px solid;
+}
+
+#time {
+    border-radius: 10px;
+    /*background-color: rgba(201, 244, 235, 0.96);*/
+    background-color: rgba(44, 116, 96, 0.61);
+    border-radius: 10px;
+    margin: 0 8px;
+    border: rgb(190, 160, 119) 3px solid;
+    margin-bottom: 40px;
+    padding: 20px auto;
+}
+
+#time p:first-child {
+    color: #fff;
+    font-family: 'Indie+Flower', cursive;
+    padding: 5px 0;
+    font-size: 2em;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: rgba(215, 180, 120, 1);
+    border-bottom: rgb(190, 160, 119) 3px solid;
+    margin-bottom: 10px;
+}
+
+.flipTimer {
+    margin: 10px auto;
+    width: 100%;
+}
+
+/*=======================================*/
+/*頁尾*/
+#footer {
+    padding: 10px;
+    background-color: #535353;
+    color: #ffffff;
+    height: 80px;
+}
+
+#footer p {
+    text-align: center;
+}
+
+/*=======================================*/
+
+/*=======================================*/
+/*響應式網頁*/
+@media (min-width: 690px) and (max-width: 890px) {
+
+    /*=======================================*/
+    /*頁頭*/
+    #header .english {
+        display: block;
+    }
+
+    #threebtn {
+        display: none;
+    }
+
+    #header h1 {
+        width: 80%;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 190%;
+    }
+
+    #header #setbar {
+        position: absolute;
+        right: 3%;
+        top: 12%;
+        height: auto;
+        margin: 15px 5px;
+        font-size: 1.1em;
+    }
+
+    #header #setbar li {
+        display: inline;
+        margin: 0 5px;
+    }
+
+    #header .login {
+        color: rgba(255, 255, 255, 0.8);
+        padding: 10px 10px;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .logoutbtn {
+        /*min-width: 50px;*/
+    }
+
+    .logoutbtn a {
+        display: block;
+        background-color: rgb(211, 188, 202);
+        color: rgb(116, 99, 87);
+        padding: 5px 5px;
+        /*padding: 12px 16px;*/
+        font-size: 1.3em;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /*主導行*/
+    #navopen {
+        display: none;
+    }
+
+    #nav2 {
+        display: block;
+        overflow: hidden;
+    }
+
+    #nav2 ul {
+        width: 100%;
+    }
+
+    #nav2 .bar {
+        float: left;
+        width: 15%;
+        height: 48px;
+        text-align: center;
+        background-color: rgba(114, 83, 57, 0.8);
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border: rgb(90, 86, 87) 2px solid;
+        border-bottom: none;
+        padding: 2px 2px;
+    }
+
+    #nav2 .barlast {
+        float: left;
+        min-width: 19%;
+        height: 48px;
+        text-align: center;
+        background-color: rgba(114, 83, 57, 0.8);
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border: rgb(90, 86, 87) 2px solid;
+        border-bottom: none;
+        padding: 2px 2px;
+    }
+
+    #nav2 #active {
+        width: 15%;
+        height: 48px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom: none;
+    }
+
+    #ulback li:last-child {
+        min-width: 19%;
+    }
+
+    #ulback #barback {
+        float: left;
+        width: 15%;
+        height: 48px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .headingbg {
+        margin: 40px 30px 20px;
+        padding: 10px 40px 0;
+        border: 1px #6eb6de dotted;
+        background: #f8ffd1;
+        border-radius: 10px;
+        color: #5d5d5d;
+    }
+
+    #date {
+        display: none;
+    }
+
+    #time {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    /*內容*/
+    #content {
+        height: auto;
+    }
+
+    #main {
+        padding: 20px;
+        width: 95%;
+        margin: 0 auto 40px;
+        height: auto;
+        /*background-color: #670d10;*/
+    }
+
+    #intro {
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        border: rgb(190, 160, 119) 3px solid;
+    }
+
+    #intro h2 {
+        font-size: 2.2em;
+        margin: 20px auto 30px;
+        font-weight: bold;
+    }
+
+    #intro p {
+        font-size: 1.8em;
+        margin-top: 20px;
+        color: #2b2b2b;
+        font-weight: bold;
+    }
+
+    .headingbg {
+        width: 90%;
+        margin: 60px auto;
+        padding: 10px 50px 20px;
+        border: 1px #6eb6de dotted;
+        background: #f8ffd1;
+        border-radius: 10px;
+        color: #5d5d5d;
+    }
+
+    #contact dt {
+        font-size: 1.6em;
+        clear: left;
+        float: left;
+        width: 7em;
+    }
+
+    #contact dd {
+        font-size: 1.3em;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 890px) {
+    /*頁首*/
+    #header .english {
+        display: block;
+    }
+
+    #header h1 {
+        width: 80%;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 250%;
+    }
+
+    #header #setbar {
+        /*background-color: #670d10;*/
+        /*width:36%;*/
+        position: absolute;
+        right: 5%;
+        top: 12%;
+        height: auto;
+        margin: 15px 5px;
+        font-size: 1.1em;
+    }
+
+    #header #setbar li {
+        display: inline;
+        margin: 0 3px;
+    }
+
+    #header .login {
+        color: rgba(255, 255, 255, 0.8);
+        padding: 10px 10px;
+        font-size: 1.4em;
+        text-decoration: none;
+        /*background-color: rgba(255, 255, 255,1);*/
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #header .english a {
+        font-size: 1.6em;
+    }
+
+    .logoutbtn a {
+        display: block;
+        background-color: rgb(211, 188, 202);
+        color: rgb(116, 99, 87);
+        padding: 5px 5px;
+        /*padding: 12px 16px;*/
+        font-size: 1.6em;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #navopen {
+        display: none;
+    }
+    #content {
+        height: auto;
+        padding: 20px;
+    }
+
+    #threebtn {
+        display: none;
+    }
+
+    #main {
+        width: 70%;
+        float: left;
+        margin-bottom: 40px;
+        /*margin-left: -10px;*/
+    }
+
+
+
+    #side {
+        margin: 30px;
+        width: 24%;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    /*.collapse{*/
+    /*display: none;*/
+    /*}*/
+    #ulback {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        overflow: hidden;
+        /*background-color: black;*/
+    }
+
+    #nav2 {
+        display: block;
+        overflow: hidden;
+    }
+
+    #nav2 ul {
+        width: 100%;
+    }
+
+    #nav2 .bar {
+        float: left;
+        width: 15%;
+        height: 55px;
+        text-align: center;
+        background-color: rgba(114, 83, 57, 0.8);
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border: rgb(90, 86, 87) 2px solid;
+        border-bottom: none;
+        padding: 2px 2px;
+    }
+
+    #nav2 a {
+        font-size: 2.5em;
+    }
+
+    #nav2 .barlast {
+        float: left;
+        min-width: 22%;
+        height: 55px;
+        text-align: center;
+        background-color: rgba(114, 83, 57, 0.8);
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border: rgb(90, 86, 87) 2px solid;
+        border-bottom: none;
+        padding: 2px 2px;
+    }
+
+    #nav2 #active {
+        width: 15%;
+        height: 55px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom: none;
+    }
+
+    #nav2 #barlastactive {
+        height: 55px;
+        min-width: 22%;
+    }
+
+    #ulback li:last-child {
+        min-width: 22%;
+    }
+
+    #ulback #barback {
+        float: left;
+        width: 15%;
+        height: 55px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    #intro {
+        padding:40px;
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        border: rgb(190, 160, 119) 3px solid;
+    }
+
+    #intro h2 {
+
+        font-size:2.6em;
+        margin: 20px auto ;
+        font-weight: bold;
+    }
+
+    #intro p {
+        font-size:2.4em;
+        margin-top: 25px;
+        color: #2b2b2b;
+        font-weight: bold;
+    }
+
+    .headingbg {
+        width: 70%;
+        margin: 60px auto;
+        padding: 10px 50px 20px;
+        border: 1px #6eb6de dotted;
+        background: #f8ffd1;
+        border-radius: 10px;
+        color: #5d5d5d;
+    }
+
+    #contact dt {
+        font-size: 1.6em;
+        clear: left;
+        float: left;
+        width: 7em;
+    }
+
+    #contact dd {
+        font-size: 1.3em;
+        overflow: hidden;
+    }
+
+    #date {
+        display: block;
+    }
+
+    /*#nav ul li:last-child{*/
+    /*width:20%;*/
+    /*}*/
+}
